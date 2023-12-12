@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" fx:id="frame" blendMode="DARKEN" cache="true" cacheHint="QUALITY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1372.0" style="-fx-background-color: #101112;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webviwe.FXMLDocumentController">
+    <children>
+      <TextField fx:id="txt" layoutX="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#load" prefHeight="32.0" prefWidth="1107.0" promptText="http://www." style="-fx-background-color: #59565e; -fx-border-color: F99201; -fx-border-width: 2px;" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <Button fx:id="refresh" layoutX="110.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadagin" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #0168F9;" text="R" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="goback" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #0168F9;" text="&lt;" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <Button fx:id="goforward" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#forward" prefHeight="30.0" prefWidth="55.0" style="-fx-background-color: #0168F9;" text="&gt; " textFill="#fffdfd" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <WebView fx:id="webviwe" layoutX="-1.0" layoutY="88.0" prefHeight="620.0" prefWidth="1373.0" />
+      <Button fx:id="browes" layoutX="1272.0" mnemonicParsing="false" onAction="#load" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #0168F9;" text="Serch" textFill="WHITE" AnchorPane.topAnchor="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="histry" layoutX="1202.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#history" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0168F9;" text="History" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Button>
+      <Button fx:id="zoomin" layoutX="1172.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zoomin" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0168F9;" text="+" textFill="#fffdfd">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="zoomout" layoutX="1142.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zoomout" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #0168F9;" text="-" textFill="#fffefe">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink fx:id="youtubelink" layoutX="212.0" layoutY="44.0" onAction="#youtube" prefHeight="35.0" prefWidth="122.0" text="Youtube.com" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="chat" layoutX="400.0" layoutY="44.0" onAction="#chatgpt" text="Chat.Gpt" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="cineru" layoutX="552.0" layoutY="44.0" onAction="#cineru" text="Cineru" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="google" layoutX="702.0" layoutY="44.0" onAction="#chrom" text="OpenChrom" textFill="#fffefe">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+     <!--<FontAwesomeIconView fill="WHITE" glyphName="YOUTUBE" layoutX="172.0" layoutY="70.0" size="30" />-->
+    <!--  <GlyphsStack layoutX="361.0" layoutY="44.0" />-->
+    </children>
+</AnchorPane>
